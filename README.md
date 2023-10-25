@@ -3,4 +3,4 @@
 
 
 ---
-SMA.im[https://sma.im]
+[SMA.im](https://sma.im)
