@@ -1,0 +1,11 @@
+/* src/Task.css */
+.task {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.task.completed {
+  text-decoration: line-through;
+  background-color: #f4f4f4;
+}
