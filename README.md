@@ -14,4 +14,28 @@ npx create-react-app my-app-name
 
 ---
 
+## Git commands
+
+```
+git add .
+```
+
+```
+git  commit -m ""
+```
+
+```
+git checkout main && git pull origin  && git checkout -b BRANCH_NAME
+```
+
+```
+git add . && git  commit -m "" &&\
+git  push origin
+```
+
+```
+git checkout main && git pull origin &&\
+git checkout -b BRANCH_NAME
+```
+
 [SMA.im](https://sma.im)
