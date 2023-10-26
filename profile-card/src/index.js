@@ -16,7 +16,7 @@ function App() {
 }
 
 function Avatar() {
-  return <img className="avatar" src="jonas.jpeg" alt="" />;
+  return <img className="avatar" src="SMA-banner-1.png" alt="" />;
 }
 
 function Intro() {

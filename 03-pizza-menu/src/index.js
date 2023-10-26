@@ -45,6 +45,13 @@ const pizzaData = [
     photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
   },
+  {
+    name: "Pizza Zeera",
+    ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
+    price: 18,
+    photoName: "pizzas/prosciutto.jpg",
+    soldOut: false,
+  },
 ];
 
 function App() {
@@ -69,13 +76,26 @@ function Header() {
 }
 
 function Menu() {
-  const pizzas = pizzaData.filter((pizza) => !pizza.soldOut);
+  // const pizzas = pizzaData.filter((pizza) => !pizza.soldOut);
+  const pizzas = pizzaData;
   const pizzaCount = pizzas.length;
+  // const pizzaCount = 0;
 
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      {pizzas && (
+
+      {pizzaCount > 0 ? (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza pizza={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      ) : (
+        <p> We are still working please contact latter</p>
+      )}
+
+      {/* {pizzas && (
         <ul className="pizzas">
           {pizzas.map((pizza) => (
             // <Pizza
@@ -87,7 +107,7 @@ function Menu() {
             <Pizza pizza={pizza} key={pizza.name} />
           ))}
         </ul>
-      )}
+      )} */}
 
       {/* <Pizza
         name="Focaccia"
