@@ -31,6 +31,7 @@ function Intro() {
   );
 }
 
+// With  data list
 function SkillList() {
   const skills = [
     {
