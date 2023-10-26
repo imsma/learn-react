@@ -86,11 +86,20 @@ function Menu() {
       <h2>Our menu</h2>
 
       {pizzaCount > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza pizza={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        // <React.Fragment key={}>
+
+        // </React.Fragment>
+        <>
+          <p>
+            Authentica Italian cuisine. More than 6 creative dishes to choose
+            from. All from our stone oven, all organic all tasty.
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizza={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
       ) : (
         <p> We are still working please contact latter</p>
       )}
