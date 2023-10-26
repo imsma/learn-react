@@ -98,9 +98,7 @@ function Menu() {
   );
 }
 
-function Pizza(props) {
-  const pizza = props.pizza;
-
+function Pizza({ pizza }) {
   if (pizza.soldOut) return null;
 
   return (
@@ -125,7 +123,7 @@ function Footer() {
   return (
     <footer className="footer">
       {isOpen ? (
-        <Order closeHour={closeHour} />
+        <Order openHour={openHour} closeHour={closeHour} />
       ) : (
         <p>
           The restaurant closed and will open between {openHour} and {closeHour}
@@ -135,11 +133,12 @@ function Footer() {
   );
 }
 
-function Order(props) {
+function Order({ openHour, closeHour }) {
   return (
     <div className="order">
       <p>
-        We are open until {props.closeHour}:00. Come Visit us or order online
+        We are open from {openHour}:00 until {closeHour}:00. Come Visit us or
+        order online
       </p>
       <button className="btn">Order</button>
     </div>
